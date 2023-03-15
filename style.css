@@ -1,0 +1,1361 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f6f6f6;
+  font-family: effra;
+}
+
+/* PARA FONTES QUE PRECISAM SER MAIUSCULAS */
+
+.maiusculo {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* PARA FONTES QUE PRECISAM TER A PRIMEIRA PALAVRA MAIUSCULA */
+
+.text {
+  text-transform: capitalize;
+}
+
+/* FORM DE QUASE TODAS AS PAGINAS */
+
+form.forms {
+  font-size: 20px;
+  font-family: effra;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* CLASSE PARA INPUTS ESCONDIDOS */
+
+.hidden {
+  display: none;
+}
+
+.asterisco {
+  color: rgb(255, 0, 0);
+  font-size: 13px;
+  position: relative;
+  bottom: 5px;
+}
+
+::placeholder {
+  color: rgb(173, 175, 184);
+  padding: 1%;
+}
+
+br.buraco {
+  display: block;
+  margin-bottom: 7px;
+}
+
+/* CABEÇA DA PAGINA */
+
+.header {
+  width: 100%;
+  padding: 1%;
+  background-color: #4d4e53;
+  position: static;
+}
+
+/* IMAGEM DO HEADER */
+
+img.titulo {
+  width: 10%;
+  padding: 10px;
+  display: block;
+  margin: auto;
+}
+
+.mostrar-senha {
+  position: absolute;
+  top: 7px;
+  left: 65%;
+  color: #d35a2a;
+  font-size: 10px;
+}
+
+.caixa-mostrar-senha {
+  position: relative;
+}
+
+.caixa-mostrar-confirmar {
+  position: relative;
+}
+
+/* ============================================= CSS DO CADASTRO ============================================= */
+
+/* DIV MESTRE DA 1° PAGINA DO CADASTRO */
+
+.conteiner-cad-1 {
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-block: 60px;
+}
+
+/* DIV MESTRE DA 2° PAGINA DO CADASTRO */
+
+.conteiner-cad-2 {
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-block: 60px;
+}
+
+/* DIV COM A IMAGEM AO LADO DOS INPUTS DAS PAGINAS DO CADASTRO */
+
+.content-cad-1 {
+  border-radius: 6px;
+  width: 63%;
+  background-color: #ddd;
+  position: static;
+  margin: 0 auto;
+  border: 4px solid #d35a2a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================= CSS DOS INPUTS DO CADASTRO ============================================= */
+
+/* EDIÇÃO DA IMAGEM AO LADO DOS INPUTS DAS PAGINAS DO CADASTRO */
+
+.image-cadastro {
+  margin-left: 10px;
+  max-width: 50%;
+}
+
+/* DIV COM AS INFORMAÇOES DAS PAGINAS DO CADASTRO */
+
+.content-cad-2 {
+  background: #fff;
+  width: 50%;
+  padding-bottom: 30px;
+}
+
+/* TITULOS DAS PAGINA DO CADASTRO */
+
+h2.cad {
+  font-family: effra;
+  color: #d35a2a;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+/* LABEL OU FONTES QUE FICARAM COM A EXPLICAÇÃO DO QUE É A CAIXA DE TEXTO OU O BOTÃO */
+
+.tudo {
+  color: #000000;
+  padding-left: 15%;
+  font-size: 15px;
+}
+
+/* INPUTS DA FOTO DO USUARIO */
+
+.imagem {
+  width: 100%;
+  max-width: 150px;
+  position: relative;
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin: auto;
+  border: 1px solid #d35a2a;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.imagem:hover {
+  border: 1px solid #4d4e53;
+}
+
+#imgPhoto {
+  margin-top: 5px;
+  width: 95%;
+  height: 130px;
+  object-fit: cover;
+  padding: 0px;
+  background-color: #fff;
+  transition: ease 0.5s;
+}
+
+#imgPhoto:hover {
+  filter: brightness(90%);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+/* INPUT DE TEXTO DO CADASTRO */
+
+input[type="text"].incad {
+  border-radius: 3px;
+  font-family: effra;
+  width: 100%;
+  max-width: 250px;
+  height: 25px;
+  border: 1px solid #d35a2a;
+  color: #4d4e53;
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+input[type="text"].incad:hover {
+  filter: brightness(90%);
+}
+
+input[type="email"].incad {
+  border-radius: 3px;
+  font-family: effra;
+  width: 100%;
+  max-width: 250px;
+  height: 25px;
+  border: 1px solid #d35a2a;
+  color: #4d4e53;
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+input[type="email"].incad:hover {
+  filter: brightness(90%);
+}
+
+input[type="password"].incad {
+  border-radius: 3px;
+  font-family: effra;
+  width: 100%;
+  max-width: 250px;
+  height: 25px;
+  border: 1px solid #d35a2a;
+  color: #4d4e53;
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+  position: relative;
+}
+
+input[type="password"]:hover {
+  filter: brightness(90%);
+}
+
+input[type="tel"] {
+  border-radius: 3px;
+  font-family: effra;
+  width: 100%;
+  max-width: 250px;
+  height: 25px;
+  border: 1px solid #d35a2a;
+  color: #4d4e53;
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+input[type="tel"]:hover {
+  filter: brightness(90%);
+}
+
+input[type="date"] {
+  border-radius: 3px;
+  font-family: effra;
+  width: 100%;
+  max-width: 250px;
+  height: 25px;
+  border: 1px solid #d35a2a;
+  color: rgb(173, 175, 184);
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+  cursor: text;
+}
+
+/* PARA PODER TIRAR O CALENDARIO */
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+  visibility: hidden;
+}
+
+input[type="date"]:checked {
+  color: #4d4d4d;
+}
+
+input[type="date"]:hover {
+  filter: brightness(90%);
+  cursor: text;
+}
+
+/* INPUTS DE BOTAO DO CADASTRO */
+
+.cradio input[type="radio"] {
+  display: none;
+}
+
+.cradio {
+  text-align: center;
+  position: relative;
+  bottom: 10px;
+  font-size: 15px;
+  font-family: Effra Light;
+  right: 10px;
+  padding: 2%;
+}
+
+.cradio input[type="radio"]+label.botao:before {
+  margin-left: 15px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #d35a2a;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transition: all 0.5s;
+
+}
+
+.cradio input[type="radio"]:checked+label.botao:before {
+  background-color: #d35a2a;
+  border: 1px solid #000;
+}
+
+.cradio input[type="radio"]:hover+label.botao:before {
+  filter: brightness(90%);
+}
+
+.image-choice-frontall {
+  width: 20%;
+  padding-left: 5px;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+.image-choice-balance {
+  width: 27%;
+  padding-left: 5px;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+
+#botoes-escolha {
+  opacity: 100%;
+}
+
+/* CUSTOMIZAÇAO DO CHECKBOX DO CADASTRO */
+
+input[type="checkbox"].cad {
+  all: unset;
+  background-color: #fff;
+  border: 1px solid #d35a2a;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 2px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+input[type="checkbox"].cad:checked {
+  background-color: #d35a2a;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+}
+
+input[type="checkbox"].cad:hover {
+  filter: brightness(90%);
+}
+
+.cbox {
+  padding: 10px;
+  text-align: center;
+}
+
+input[type="checkbox"].cad-view-password {
+  all: unset;
+  background-color: #fff;
+  border: 1px solid #d35a2a;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 2px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+input[type="checkbox"].cad-view-password:checked {
+  background-color: #d35a2a;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+}
+
+input[type="checkbox"].cad-view-password:hover {
+  filter: brightness(90%);
+}
+
+label.info-botao {
+  color: #000000;
+  font-size: 15px;
+  font-family: effra light;
+}
+
+select.cad-funcoes {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #d35a2a;
+  border-radius: 3px;
+  font-size: 10px;
+  transition: all 0.5s;
+  display: block;
+  margin: 0px 0px 10px 0px;
+  text-align: left;
+  padding: 1% 2% 1% 2%;
+}
+
+option.cad-funcoes {
+  border: 1px solid #d35a2a;
+  color: #d35a2a;
+  transition: all 0.5s;
+}
+
+select.cad-funcoes:hover {
+  filter: brightness(90%);
+}
+
+option.cad-funcoes:checked {
+  color: #4d4e53;
+  font-weight: bold;
+}
+
+/* PERSONALIZAÇÃO DO NOVO SELECT */
+
+#conteiner-select {
+  display: block;
+  height: 50px;
+}
+
+#new-select-input {
+  width: 90px;
+  background: #fff;
+  border: 1px solid #d35a2a;
+  outline: none;
+  border-radius: 3px;
+  font-family: effra;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-align: center;
+  color: #d35a2a;
+}
+
+#new-select-input:focus {
+  border: 1px solid #4d4d4d;
+}
+
+#new-select-box {
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #4d4d4d;
+  border-top: 0px;
+  display: none;
+}
+
+.item {
+  padding: 5px 0 5px 0;
+  background: #fff;
+  transition: all 0.1s;
+  cursor: pointer;
+  font-family: effra light
+}
+
+.item:hover {
+  filter: brightness(90%);
+  font-family: effra;
+  font-size: 15px;
+  color: #d35a2a;
+}
+
+#botoes-funcoes {
+  display: none;
+  justify-content: center;
+}
+
+#termino {
+  border-radius: 3px;
+  font-family: effra;
+  width: 100%;
+  max-width: 250px;
+  height: 25px;
+  border: 1px solid #d35a2a;
+  color: #4d4e53;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  transition: all 0.5s;
+}
+
+#termino:focus {
+  border: 1px solid #4d4e53;
+  outline: 0;
+}
+
+textarea:focus,
+input:focus.incad {
+  border: 1px solid #4d4e53;
+  outline: 0;
+}
+
+textarea:focus,
+select.cad-funcoes:focus,
+option.cad-funcoes:focus {
+  border: 1px solid #4d4e53;
+  outline: 0;
+}
+
+/* BOTAO DE SUBMIT DO CADASTRO */
+
+input[type="submit"] {
+  border: none;
+  padding: 10px;
+  background-color: #d35a2a;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
+input[type="submit"]:hover {
+  filter: brightness(120%);
+}
+
+
+/* ============================================= FIM CSS DOS INPUTS DO CADASTRO ============================================= */
+
+/* LINK PARA CASO O USUARIO EFETUAR O LOGIN */
+
+p.linklog {
+  color: #000;
+  font-size: 10px;
+  font-family: effra light;
+  text-align: center;
+}
+
+.log:visited {
+  font-size: 10px;
+  color: rgb(123, 126, 139);
+}
+
+.log:link {
+  font-size: 10px;
+  color: rgb(123, 126, 139);
+  margin-left: 0.5%;
+  font-family: effra;
+}
+
+.log:hover {
+  font-size: 10px;
+  color: #d35a2a;
+}
+
+/* DIV DO RODAPÉ */
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-block: 60px;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-info>span {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-icones {
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.footer-logo {
+  height: 80px;
+  object-fit: cover;
+}
+
+.logo-redes {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  left: 140%;
+  top: 10px;
+  margin-left: 10px;
+  transition: all 0.3s;
+}
+
+.logo-redes:hover {
+  filter: brightness(180%);
+}
+
+.fonte-rede {
+  color: #d35a2a;
+  position: relative;
+  top: 3.5%;
+  left: 20%;
+}
+
+.link-site {
+  font-size: 18px;
+  margin-bottom: 50px;
+  color: #4d4e53;
+  font-family: effra light;
+}
+
+.link-site:hover {
+  color: #d35a2a;
+}
+
+.site:visited {
+  font-size: 20px;
+  color: #4d4e53;
+}
+
+.site:hover {
+  font-size: 20px;
+  color: #d35a2a;
+}
+
+.subtitle-footer {
+  color: #d35a2a;
+  font-family: effra;
+  font-weight: bold;
+}
+
+.info-footer {
+  color: #4d4d4d;
+  font-family: effra light;
+}
+
+
+/*============================================= CSS DA PAGINA DE LOGIN =============================================*/
+
+/* DIV MESTRE DO LOGIN */
+
+.conteiner-log {
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-block: 60px;
+}
+
+/* DIV DA IMAGEM AO LADO DOS INPUTS DO LOGIM */
+
+.content-log-1 {
+  border-radius: 6px;
+  width: 63%;
+  background-color: #ddd;
+  position: static;
+  margin: 0 auto;
+  border: 4px solid #4d4d4d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* EDIÇÃO DA IMAGEM DO LOGIN */
+
+.image-login {
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+/* DIV COM AS INFORMAÇOES DA PAGINA DE LOGIN */
+
+.content-log-2 {
+  background: #fff;
+  width: 50%;
+  padding-bottom: 30px;
+}
+
+h2 {
+  font-family: effra;
+  color: #4d4e53;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+/* ============================================= CSS DOS INPUTS DO LOGIN ============================================= */
+
+/* INPUTS DE TEXTO DO LOGIN */
+
+input[type="text"].log {
+  border-radius: 3px;
+  font-family: effra;
+  width: 450px;
+  height: 25px;
+  border: 1px solid #4d4e53;
+  color: #d35a2a;
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+input[type="text"].log:hover {
+  filter: brightness(90%);
+}
+
+input[type="email"].inlogin {
+  border-radius: 3px;
+  font-family: effra;
+  width: 100%;
+  max-width: 250px;
+  height: 25px;
+  border: 1px solid #4d4e53;
+  color: #d35a2a;
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+input[type="email"].inlogin:hover {
+  filter: brightness(90%);
+}
+
+input[type="password"].inlogin {
+  border-radius: 3px;
+  font-family: effra;
+  width: 100%;
+  max-width: 250px;
+  height: 25px;
+  border: 1px solid #4d4e53;
+  color: #d35a2a;
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+input[type="password"].inlogin:hover {
+  filter: brightness(90%);
+}
+
+input[type="text"].inlogin {
+  border-radius: 3px;
+  font-family: effra;
+  width: 100%;
+  max-width: 250px;
+  height: 25px;
+  border: 1px solid #4d4e53;
+  color: #d35a2a;
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+input[type="text"].inlogin:hover {
+  filter: brightness(90%);
+}
+
+input[type="checkbox"].inlogin {
+  all: unset;
+  background-color: #fff;
+  border: 1px solid #4d4e53;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 2px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+input[type="checkbox"]:checked.inlogin {
+  background-color: #4d4e53;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #aaa;
+}
+
+input[type="checkbox"]:hover.inlogin {
+  filter: brightness(90%);
+}
+
+textarea:focus,
+input:focus.inlogin {
+  border: 1px solid #d35a2a;
+  outline: 0;
+}
+
+
+input[type="submit"].botao-login {
+  border: none;
+  padding: 10px;
+  background-color: #4d4e53;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
+input[type="submit"]:hover.botao-login
+
+/* INPUT DO MOUSE NO BOTAO */
+  {
+  filter: brightness(180%);
+}
+
+p.linkcad {
+  color: #000;
+  font-size: 10px;
+  font-family: effra light;
+  text-align: center;
+}
+
+/* ============================================= CSS DA PAGINA DE INFORMAÇÕES ============================================= */
+
+/* DIVs DE EDITAR OU VER OS DADOS */
+
+.conteiner-logado {
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-block: 80px;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.content-logado-1 {
+  border-radius: 6px;
+  width: 80%;
+  background-color: #ddd;
+  position: static;
+  border: 4px solid #4d4d4d;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1%;
+  text-align: center;
+}
+
+.content-logado-2 {
+  background: #fff;
+  width: 25%;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
+
+.content-logado-3 {
+  background: #fff;
+  width: 100%;
+  padding-top: 9%;
+  min-width: 100%;
+  font-size: 20px;
+  display: flex;
+}
+
+.title-logado {
+  position: absolute;
+  width: 60%;
+  left: 20%;
+  top: 27%;
+}
+
+.title-content-logado {
+  font-size: 40px;
+}
+
+.container-description-user {
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.content-description-user-1 {
+  width: auto;
+  max-width: 40%;
+}
+
+.content-description-user-2 {
+  width: auto;
+  max-width: 18%;
+}
+
+.content-description-user-3 {
+  width: auto;
+  max-width: 18%;
+}
+
+.fonts-logado {
+  color: #d35a2a;
+  padding: 0px 0px 0px 0px;
+}
+
+/* DIV PARA GUARDAR OS BOTÕES */
+
+.box-buttons-logado {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* BOTAO PARA VOLTAR AO LOGIN */
+
+.return-login {
+  border: none;
+  background: #4d4e53;
+  width: 100px;
+  padding-block: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 0px;
+  border-bottom-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+  font-weight: 700;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  text-decoration: none;
+}
+
+.return-login:hover {
+  filter: brightness(190%);
+  color: #000;
+}
+
+/* INPUT DO BOTÃO DE ENVIAR PARA A EDIÇÃO */
+
+input[type="submit"].botao-enviar-logado {
+  border: none;
+  width: 100px;
+  padding-block: 20px;
+  background: #4d4e53;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 0px;
+  border-bottom-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+  font-weight: 700;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  text-decoration: none;
+}
+
+input[type="submit"].botao-enviar-logado:hover {
+  background: #d35a2a;
+  color: #000;
+}
+
+/* BOTÂO PARA DELETAR */
+
+.delete-user {
+  border: none;
+  background: #4d4e53;
+  width: 100px;
+  padding-block: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 0px;
+  border-bottom-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+  font-weight: 700;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  text-decoration: none;
+}
+
+.delete-user:hover {
+  background: #f33;
+  color: #000;
+}
+
+.mensagem-deletar {
+  position: absolute;
+  width: 60%;
+  padding: 10px;
+  top: 20%;
+  left: 20%;
+  background: #fff;
+  border-radius: 20px;
+  border: 4px solid #d35a2a;
+}
+
+.conteiner-delete {
+  width: 100%;
+  height: 135%;
+  background: #000;
+  opacity: 50%;
+  top: 0%;
+  position: absolute;
+  transition: all 5s;
+}
+
+.content-deletar {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  height: 80%;
+  border-radius: 10px;
+}
+
+.titulo-deletar {
+  width: 100%;
+  background: #eee;
+  text-transform: uppercase;
+  color: #d35a2a;
+  padding: 10px;
+}
+
+.botoes-na-box-deletar {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+input[type="submit"].botao-para-deletar {
+  border: none;
+  width: 100px;
+  padding: 10px;
+  background-color: #f33;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0px;
+}
+
+input[type='submit'].botao-para-deletar:hover {
+  filter: brightness(80%);
+}
+
+.sair-delete {
+  border: none;
+  width: 100px;
+  padding: 10px;
+  background-color: #d35a2a;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: none;
+}
+
+.sair-delete:hover {
+  filter: brightness(150%);
+}
+
+/* ============================================= CSS DA PAGINA DE EDIÇÃO ============================================= */
+
+.container-edit {
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-block: 60px;
+}
+
+.content-edit-1 {
+  border-radius: 6px;
+  width: 90%;
+  background-color: #ddd;
+  position: static;
+  margin: auto;
+  border: 4px solid #d35a2a;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.image-edit {
+  max-width: 30%;
+  margin: 0 auto;
+}
+
+.content-edit-2 {
+  background: #fff;
+  width: 55%;
+  padding-bottom: 30px;
+}
+
+.container-edit-inputs {
+  display: flex;
+  padding-inline: 10px;
+}
+
+.content-edit-3 {
+  width: 65%;
+}
+
+.content-edit-4 {
+  width: 35%;
+}
+
+/* ============================================= CSS DOS INPUTS DA EDIÇÂO ============================================= */
+
+.title-input {
+  font-size: 22px;
+}
+
+/* INPUTS DE TEXTO */
+
+.inedition {
+  border: none;
+  margin: 10px;
+  padding: 2px;
+  font-family: effra;
+  background: none;
+  font-size: 20px;
+  color: #4d4e53;
+  transition: all 0.3s;
+}
+
+textarea:focus,
+.inedition:focus {
+  border: none;
+  outline: 0;
+  color: #d35a2a;
+}
+
+/* PARA INPUTS DE ENDEREÇO E EMAIL */
+
+.inedition-big {
+  width: 370px;
+  border: none;
+  margin: 10px;
+  padding: 2px;
+  font-family: effra;
+  background: none;
+  font-size: 20px;
+  color: #4d4e53;
+  transition: all 0.3s;
+}
+
+.inedition-password {
+  border: none;
+  margin: 10px;
+  padding: 2px;
+  font-family: effra;
+  background: none;
+  font-size: 20px;
+  color: #4d4e53;
+  transition: all 0.3s;
+  width: 230px;
+}
+
+input[type="date"].inedition {
+  border: none;
+  margin: 10px;
+  padding: 2px;
+  font-family: effra;
+  background: none;
+  font-size: 20px;
+  color: #4d4e53;
+  transition: all 0.3s;
+  padding-bottom: 10px;
+}
+
+textarea:focus,
+.inedition-big:focus {
+  border: none;
+  outline: 0;
+  color: #d35a2a;
+}
+
+textarea:focus,
+.inedition-password:focus {
+  border: none;
+  outline: 0;
+  color: #d35a2a;
+}
+
+textarea:focus,
+input[type="date"].inedition:focus {
+  border: none;
+  outline: 0;
+  color: #d35a2a;
+}
+
+/* INPUTS DE BOTÃO */
+
+.cradio-edit input[type="radio"] {
+  display: none;
+}
+
+.cradio-edit {
+  position: relative;
+  bottom: 10px;
+  font-size: 15px;
+  font-family: effra light;
+  right: 5px;
+  padding: 6px;
+  color: #4d4e53;
+}
+
+.cradio-edit input[type="radio"]+label.botao:before {
+  margin-left: 15px;
+  content: "";
+  padding: 6px;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #4d4e53;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.cradio-edit input[type="radio"]:checked+label.botao:before {
+  background-color: #d35a2a;
+  border: 1px solid #d35a2a;
+}
+
+.cradio-edit input[type="radio"]:hover+label.botao:before {
+  filter: brightness(70%);
+}
+
+.checkbox-edit {
+  all: unset;
+  background-color: #fff;
+  border: 1px solid #4d4e53;
+  padding: 6px;
+  display: inline-block;
+  border-radius: 2px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+
+.checkbox-edit:checked {
+  background-color: #d35a2a;
+  border: 1px solid #d35a2a;
+}
+
+.checkbox-edit:hover {
+  filter: brightness(70%);
+}
+
+.cbox-edit {
+  width: 79%;
+  text-align: center;
+  color: #4d4e53;
+}
+
+.fontes-font {
+  color: #4d4e53;
+  font-size: 15px;
+  font-family: effra light;
+}
+
+#botoes-funcoes-edit {
+  width: auto;
+  max-width: 83%;
+  margin-left: 2%;
+}
+
+.nivel-funcoes-edit {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #4d4e53;
+  border-radius: 3px;
+  font-size: 10px;
+  transition: all 0.5s;
+  display: block;
+  text-align: left;
+  margin: auto;
+  padding: 1% 6% 1% 6%;
+  color: #4d4e53;
+  transition: all 0.5s;
+}
+
+.nivel-funcoes-edit:hover {
+  border: 1px solid #d35a2a;
+}
+
+.nivel-funcoes-edit:checked {
+  color: #d35a2a;
+  font-weight: bold;
+}
+
+textarea:focus,
+.nivel-funcoes-edit:focus {
+  border: 1px solid #d35a2a;
+  outline: 0;
+}
+
+/* INPUTS DO BOTÃO PARA FINALIZAR O  */
+
+.submit-edit {
+  border: none;
+  padding: 20px 30px;
+  background-color: #d35a2a;
+  text-transform: uppercase;
+  color: #000;
+  border-radius: 0px;
+  border-bottom-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+  font-weight: 700;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
+.submit-edit:hover {
+  background: #4d4e53;
+  color: #fff;
+}
+
+/* Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023 */
