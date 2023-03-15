@@ -1,8 +1,6 @@
 <?php
 
-	$id = $_GET['id'];
-
-	include "php/select_edicao.php";
+include "php/select_edicao.php";
 
 ?>
 <html lang="pt-br">
@@ -57,82 +55,54 @@
 							</label>
 							<br /> <input type="text" name="endereco" id="endereco" class="inedition-big" autocomplete="off" value="<?php echo "$endereco"; ?>" required placeholder="Digite seu Endereço" />
 							<br /><br />
-							<label for="funcao" class="title-input"> funcao: <span class="asterisco">*</span>
+							<label for="empresa" class="title-input"> contrato: <span class="asterisco">*</span>
 								<br /> <br />
 							</label>
 							<div class="cradio-edit">
-								<?php
-								if (($funcao == 'Frontend') || ($funcao == 'frontend')) {
-									print '<input id="frontend" type="radio" name="funcao" value="frontend" checked required/>
-                                        <label for="frontend" class="botao"> Frontend </label>';
-								} else {
-									print '<input id="frontend" type="radio" name="funcao" value="frontend" required/>
-                                        <label for="frontend" class="botao"> Frontend </label>';
-								}
+								<input id="frontall" type="radio" name="empresa" value="Frontall" required />
+								<label for="frontall" class="botao">
+									<img src="Imagens/Logo-Frontall(colorido).png" alt="Frontall" class="image-choice-frontall" />
+								</label>
+								<input id="balance" type="radio" name="empresa" value="Balance" />
+								<label for="balance" class="botao">
+									<img src="Imagens/balance(logo).png" alt="Balance" class="image-choice-balance" />
+								</label>
+							</div>
+							<div class="select-edit-frontall">
+								<div id="botoes-escolha">
+									<div id="container-select-frontall" class="container-edicao-select-frontall">
+										<input type="text" id="new-select-input-frontall" name="funcao-frontall" placeholder="Selecione o Cargo" onfocus="selectFrontall(0)" onblur="selectFrontall(1)" />
+										<div id="new-select-box-frontall">
+											<div class="choice" id="choose1" onmousedown="choose(1)"> CEO </div>
+											<div class="choice" id="choose2" onmousedown="choose(2)"> Executive VP </div>
+											<div class="choice" id="choose3" onmousedown="choose(3)"> ADM/Finance </div>
+											<div class="choice" id="choose4" onmousedown="choose(4)"> Recruitment </div>
+											<div class="choice" id="choose5" onmousedown="choose(5)"> People and Culture </div>
+											<div class="choice" id="choose6" onmousedown="choose(6)"> Marketing </div>
+											<div class="choice" id="choose7" onmousedown="choose(7)"> Sales </div>
+											<div class="choice" id="choose8" onmousedown="choose(8)"> Custumer Device </div>
+											<div class="choice" id="choose9" onmousedown="choose(9)"> IT </div>
+										</div>
+									</div>
+								</div>
+								<div id="botoes-funcoes">
+									<div id="conteiner-select-balance" class="container-edicao-select-balance">
+										<input type="text" id="new-select-input-balance" name="funcao-balance" placeholder="Selecione o Cargo" onfocus="selectBalance(0)" onblur="selectBalance(1)" />
+										<div id="new-select-box-balance">
+											<div class="item" id="item1" onmousedown="options(1)"> Frontend </div>
+											<div class="item" id="item2" onmousedown="options(2)"> Backend </div>
+											<div class="item" id="item3" onmousedown="options(3)"> BA </div>
+											<div class="item" id="item4" onmousedown="options(4)"> QA </div>
+											<div class="item" id="item5" onmousedown="options(5)"> UI/UX </div>
+										</div>
+									</div>
+								</div>
+								<div class="cradio" id="radio-from-funcao">
+								</div>
 
-								if (($funcao == 'Backend') || ($funcao == 'backend')) {
-									print '<input id="backend" type="radio" name="funcao" value="backend" checked />
-                                        <label for="backend" class="botao"> Backend </label>';
-								} else {
-									print '<input id="backend" type="radio" name="funcao" value="backend" />
-                                        <label for="backend" class="botao"> Backend </label>';
-								}
-
-								if (($funcao == 'BA') || ($funcao == 'ba') || ($funcao == 'Ba')) {
-									print '<input id="BA" type="radio" name="funcao" value="BA" checked/>
-									<label for="BA" class="botao"> BA </label>';
-								} else {
-									print '<input id="BA" type="radio" name="funcao" value="BA" />
-									<label for="BA" class="botao"> BA </label>';
-								}
-
-								if (($funcao == 'QA') || ($funcao == 'qa') || ($funcao == 'Qa')) {
-									print '<input id="QA" type="radio" name="funcao" value="QA" checked/>
-									<label for="QA" class="botao"> QA </label>';
-								} else {
-									print '<input id="QA" type="radio" name="funcao" value="QA" />
-									<label for="QA" class="botao"> QA </label>';
-								}
-
-								if (($funcao == 'UI/UX') || ($funcao == 'ui/ux') || ($funcao == 'Ui/Ux')) {
-									print '<input id="ui/ux" type="radio" name="funcao" value="ui/ux" checked/>
-									<label for="ui/ux" class="botao"> ui/ux </label>';
-								} else {
-									print '<input id="ui/ux" type="radio" name="funcao" value="ui/ux" />
-									<label for="ui/ux" class="botao"> ui/ux </label>';
-								}
-
-								?>
 							</div>
 
 							<div id="botoes-funcoes-edit">
-								<?php
-								if ($funcao_nivel == "JR") {
-									echo '<select class="nivel-funcoes-edit" name="nivel_funcao">
-                                        <label class="nivel-funcoes-edit">
-                                            <option class="nivel-funcoes-edit" selected> JR </option>
-                                            <option class="nivel-funcoes-edit" > MID </option>
-                                            <option class="nivel-funcoes-edit" > SR </option>
-                                        </label>
-                                    </select>';
-								} else if ($funcao_nivel == "MID") {
-									echo '<select class="nivel-funcoes-edit" name="nivel_funcao">
-                                        <label class="nivel-funcoes-edit">
-                                            <option class="nivel-funcoes-edit" > JR </option>
-                                            <option class="nivel-funcoes-edit" selected> MID </option>
-                                            <option class="nivel-funcoes-edit" > SR </option>
-                                        </label>
-                                    </select>';
-								} else if ($funcao_nivel == "SR") {
-									echo '<select class="nivel-funcoes-edit" name="nivel_funcao">
-                                        <label class="nivel-funcoes-edit">
-                                            <option class="nivel-funcoes-edit" > JR </option>
-                                            <option class="nivel-funcoes-edit" > MID </option>
-                                            <option class="nivel-funcoes-edit" selected> SR </option>
-                                        </label>
-                                    </select>';
-								}
-								?>
 							</div>
 
 							<br /> <label for="fonte" class="title-input"> fonte: <span class="asterisco">*</span>
@@ -208,7 +178,7 @@
 								<?php
 								if ($situacao == 'ativo' || $situacao == 'Ativo' || $situacao == 'ATIVO') {
 									echo '<input id="ativo" type="radio" name="situacao" value="ativo" required checked />
-                                        <label for="ativo" class="botao"> ativo </label>
+									<label for="ativo" class="botao"> ativo </label>
 
                                         <input id="inativo" type="radio" name="situacao" value="inativo" />
                                         <label for="inativo" class="botao"> inativo </label>';
@@ -235,7 +205,7 @@
 					</div>
 			</div>
 		</div>
-		<button type="submit" class="submit-edit" name="enviar" value="editado" onclick="return validarSenha()"> enviar </button> 
+		<button type="submit" class="submit-edit" name="enviar" value="editado" onclick="return validarSenha()"> enviar </button>
 		</form>
 	</div>
 	<div class="footer">
@@ -266,14 +236,82 @@
 	<script src="js/scriptFuncoesEdit.js"></script>
 	<script src="js/scriptMascaraTelefone.js"></script>
 	<script src="js/scriptMascaraCpf.js"></script>
-	<script src="js/scriptAparecerFuncoes.js"></script>
+	<script src="js/aparecerFuncoes.js"></script>
 	<script src="js/scriptAparecerTermino.js"></script>
 	<script src="js/scriptCheckbox.js"></script>
 	<script src="js/scriptMascaraData.js"></script>
 	<script>
 		document.getElementById("id").value = "<?php echo $id; ?>";
 	</script>
-	<!--Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023  -->
 </body>
 
 </html>
+<?php
+// if (($funcao == 'Frontend') || ($funcao == 'frontend')) {
+// 	print '<input id="frontend" type="radio" name="funcao" value="frontend" checked required/>
+//         <label for="frontend" class="botao"> Frontend </label>';
+// } else {
+// 	print '<input id="frontend" type="radio" name="funcao" value="frontend" required/>
+//         <label for="frontend" class="botao"> Frontend </label>';
+// }
+
+// if (($funcao == 'Backend') || ($funcao == 'backend')) {
+// 	print '<input id="backend" type="radio" name="funcao" value="backend" checked />
+//         <label for="backend" class="botao"> Backend </label>';
+// } else {
+// 	print '<input id="backend" type="radio" name="funcao" value="backend" />
+//         <label for="backend" class="botao"> Backend </label>';
+// }
+
+// if (($funcao == 'BA') || ($funcao == 'ba') || ($funcao == 'Ba')) {
+// 	print '<input id="BA" type="radio" name="funcao" value="BA" checked/>
+// 	<label for="BA" class="botao"> BA </label>';
+// } else {
+// 	print '<input id="BA" type="radio" name="funcao" value="BA" />
+// 	<label for="BA" class="botao"> BA </label>';
+// }
+
+// if (($funcao == 'QA') || ($funcao == 'qa') || ($funcao == 'Qa')) {
+// 	print '<input id="QA" type="radio" name="funcao" value="QA" checked/>
+// 	<label for="QA" class="botao"> QA </label>';
+// } else {
+// 	print '<input id="QA" type="radio" name="funcao" value="QA" />
+// 	<label for="QA" class="botao"> QA </label>';
+// }
+
+// if (($funcao == 'UI/UX') || ($funcao == 'ui/ux') || ($funcao == 'Ui/Ux')) {
+// 	print '<input id="ui/ux" type="radio" name="funcao" value="ui/ux" checked/>
+// 	<label for="ui/ux" class="botao"> ui/ux </label>';
+// } else {
+// 	print '<input id="ui/ux" type="radio" name="funcao" value="ui/ux" />
+// 	<label for="ui/ux" class="botao"> ui/ux </label>';
+// }
+
+?>
+<?php
+// if ($funcao_nivel == "JR") {
+// 	echo '<select class="nivel-funcoes-edit" name="nivel_funcao">
+//         <label class="nivel-funcoes-edit">
+//             <option class="nivel-funcoes-edit" selected> JR </option>
+//             <option class="nivel-funcoes-edit" > MID </option>
+//             <option class="nivel-funcoes-edit" > SR </option>
+//         </label>
+//     </select>';
+// } else if ($funcao_nivel == "MID") {
+// 	echo '<select class="nivel-funcoes-edit" name="nivel_funcao">
+//         <label class="nivel-funcoes-edit">
+//             <option class="nivel-funcoes-edit" > JR </option>
+//             <option class="nivel-funcoes-edit" selected> MID </option>
+//             <option class="nivel-funcoes-edit" > SR </option>
+//         </label>
+//     </select>';
+// } else if ($funcao_nivel == "SR") {
+// 	echo '<select class="nivel-funcoes-edit" name="nivel_funcao">
+//         <label class="nivel-funcoes-edit">
+//             <option class="nivel-funcoes-edit" > JR </option>
+//             <option class="nivel-funcoes-edit" > MID </option>
+//             <option class="nivel-funcoes-edit" selected> SR </option>
+//         </label>
+//     </select>';
+// }
+?>

@@ -1,7 +1,7 @@
 <?php
 include "conexao.php";
 
-$validar_edit = $_POST['enviar'] ;
+$validar_edit = $_REQUEST['enviar'] ;
 
 if ($validar_edit == 'editado') {
     $id = $_POST['id'];
@@ -59,6 +59,5 @@ if (mysqli_query($conn, $update)) {
 } else if ($validar_edit == 'editar') {
 } else if ($validar_edit == 'logar') {
 } else if ($validar_edit == 'cadastrar') {
-} 
-
-// Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023 
+} else if ($botao == 'nada'){
+}

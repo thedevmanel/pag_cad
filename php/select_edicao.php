@@ -2,7 +2,6 @@
 
 include "conexao.php";
 
-// $email = $_POST['email'];
 $id = $_GET['id'];
 $gatilho = true;
 
@@ -23,6 +22,7 @@ if (($select) && ($select -> num_rows != 0)) {
             $data_nascimento = $rows['data_nascimento'];
             $data_inicio = $rows['data_inicio'];
             $endereco = $rows['endereco'];
+            $empresa = $rows['empresa'];
             $funcao = $rows['funcao'];
             $funcao_nivel = $rows['funcao_nivel'];
             $remuneracao = $rows['remuneracao'];
@@ -45,5 +45,3 @@ if ($gatilho == true) {
 }
 
 mysqli_close($conn);
-
-// Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023 

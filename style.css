@@ -82,7 +82,7 @@ img.titulo {
 .mostrar-senha {
   position: absolute;
   top: 7px;
-  left: 65%;
+  left: 75%;
   color: #d35a2a;
   font-size: 10px;
 }
@@ -208,7 +208,7 @@ input[type="text"].incad {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 250px;
+  max-width: 320px;
   height: 25px;
   border: 1px solid #d35a2a;
   color: #4d4e53;
@@ -225,7 +225,7 @@ input[type="email"].incad {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 250px;
+  max-width: 320px;
   height: 25px;
   border: 1px solid #d35a2a;
   color: #4d4e53;
@@ -242,7 +242,7 @@ input[type="password"].incad {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 250px;
+  max-width: 320px;
   height: 25px;
   border: 1px solid #d35a2a;
   color: #4d4e53;
@@ -260,7 +260,7 @@ input[type="tel"] {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 250px;
+  max-width: 320px;
   height: 25px;
   border: 1px solid #d35a2a;
   color: #4d4e53;
@@ -277,7 +277,7 @@ input[type="date"] {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 250px;
+  max-width: 320px;
   height: 25px;
   border: 1px solid #d35a2a;
   color: rgb(173, 175, 184);
@@ -335,7 +335,6 @@ input[type="date"]:hover {
   margin-bottom: 3px;
   cursor: pointer;
   transition: all 0.5s;
-
 }
 
 .cradio input[type="radio"]:checked+label.botao:before {
@@ -362,7 +361,8 @@ input[type="date"]:hover {
 }
 
 #botoes-escolha {
-  opacity: 100%;
+  display: none;
+  justify-content: center;
 }
 
 /* CUSTOMIZAÇAO DO CHECKBOX DO CADASTRO */
@@ -409,6 +409,7 @@ input[type="checkbox"].cad-view-password {
   transition: all 0.5s;
 }
 
+
 input[type="checkbox"].cad-view-password:checked {
   background-color: #d35a2a;
   width: 10px;
@@ -426,44 +427,20 @@ label.info-botao {
   font-family: effra light;
 }
 
-select.cad-funcoes {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: 1px solid #d35a2a;
-  border-radius: 3px;
-  font-size: 10px;
-  transition: all 0.5s;
-  display: block;
-  margin: 0px 0px 10px 0px;
-  text-align: left;
-  padding: 1% 2% 1% 2%;
-}
-
-option.cad-funcoes {
-  border: 1px solid #d35a2a;
-  color: #d35a2a;
-  transition: all 0.5s;
-}
-
-select.cad-funcoes:hover {
-  filter: brightness(90%);
-}
-
-option.cad-funcoes:checked {
-  color: #4d4e53;
-  font-weight: bold;
-}
-
 /* PERSONALIZAÇÃO DO NOVO SELECT */
 
-#conteiner-select {
+#container-select-frontall{
   display: block;
   height: 50px;
 }
 
-#new-select-input {
-  width: 90px;
+#conteiner-select-balance {
+  display: block;
+  height: 50px;
+}
+
+#new-select-input-frontall{
+  width: 160px;
   background: #fff;
   border: 1px solid #d35a2a;
   outline: none;
@@ -475,16 +452,49 @@ option.cad-funcoes:checked {
   color: #d35a2a;
 }
 
-#new-select-input:focus {
+#new-select-input-balance {
+  width: 110px;
+  background: #fff;
+  border: 1px solid #d35a2a;
+  outline: none;
+  border-radius: 3px;
+  font-family: effra;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-align: center;
+  color: #d35a2a;
+}
+
+#new-select-input-frontall:focus{
   border: 1px solid #4d4d4d;
 }
 
-#new-select-box {
+#new-select-input-balance:focus {
+  border: 1px solid #4d4d4d;
+}
+
+#new-select-box-frontall {
   text-align: center;
   font-size: 12px;
   border: 1px solid #4d4d4d;
   border-top: 0px;
   display: none;
+}
+
+#new-select-box-balance {
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #4d4d4d;
+  border-top: 0px;
+  display: none;
+}
+
+.choice {
+  padding: 5px 0 5px 0;
+  background: #fff;
+  transition: all 0.1s;
+  cursor: pointer;
+  font-family: effra light
 }
 
 .item {
@@ -495,6 +505,13 @@ option.cad-funcoes:checked {
   font-family: effra light
 }
 
+.choice:hover {
+  filter: brightness(90%);
+  font-family: effra;
+  font-size: 15px;
+  color: #d35a2a;
+}
+
 .item:hover {
   filter: brightness(90%);
   font-family: effra;
@@ -502,16 +519,22 @@ option.cad-funcoes:checked {
   color: #d35a2a;
 }
 
+#radio-from-funcao {
+  display: none;
+}
+
 #botoes-funcoes {
   display: none;
   justify-content: center;
 }
 
+/* PARA A DATA TERMINO */
+
 #termino {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 250px;
+  max-width: 320px;
   height: 25px;
   border: 1px solid #d35a2a;
   color: #4d4e53;
@@ -720,6 +743,34 @@ h2 {
   text-align: center;
 }
 
+.image-insade {
+  margin-top: 5px;
+  width: 95%;
+  height: 130px;
+  object-fit: cover;
+  padding: 0px;
+  background-color: #fff;
+  transition: ease 0.5s;
+}
+
+.box-image-logado {
+  width: 100%;
+  max-width: 150px;
+  position: relative;
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+.image-frontall-from-logado {
+  width: 70%;
+  margin-top: -110%;
+}
+
 /* ============================================= CSS DOS INPUTS DO LOGIN ============================================= */
 
 /* INPUTS DE TEXTO DO LOGIN */
@@ -727,7 +778,8 @@ h2 {
 input[type="text"].log {
   border-radius: 3px;
   font-family: effra;
-  width: 450px;
+  width: 100%;
+  max-width: 330px;
   height: 25px;
   border: 1px solid #4d4e53;
   color: #d35a2a;
@@ -744,7 +796,7 @@ input[type="email"].inlogin {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 250px;
+  max-width: 330px;
   height: 25px;
   border: 1px solid #4d4e53;
   color: #d35a2a;
@@ -761,7 +813,7 @@ input[type="password"].inlogin {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 250px;
+  max-width: 330px;
   height: 25px;
   border: 1px solid #4d4e53;
   color: #d35a2a;
@@ -778,7 +830,7 @@ input[type="text"].inlogin {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 250px;
+  max-width: 330px;
   height: 25px;
   border: 1px solid #4d4e53;
   color: #d35a2a;
@@ -1145,12 +1197,113 @@ input[type='submit'].botao-para-deletar:hover {
   font-size: 22px;
 }
 
+/* PERSONALIZAÇÃO DO SELECT */
+/*
+.container-edicao-select-frontall {
+  display: block;
+  height: 10px;
+}
+
+.conteiner-edicao-select-balance {
+  display: block;
+  height: 10px;
+}
+
+#new-select-input-frontall{
+  width: 160px;
+  background: #fff;
+  border: 1px solid #d35a2a;
+  outline: none;
+  border-radius: 3px;
+  font-family: effra;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-align: center;
+  color: #d35a2a;
+}
+
+#new-select-input-balance {
+  width: 110px;
+  background: #fff;
+  border: 1px solid #d35a2a;
+  outline: none;
+  border-radius: 3px;
+  font-family: effra;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-align: center;
+  color: #d35a2a;
+}
+
+#new-select-input-frontall:focus{
+  border: 1px solid #4d4d4d;
+}
+
+#new-select-input-balance:focus {
+  border: 1px solid #4d4d4d;
+}
+
+#new-select-box-frontall {
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #4d4d4d;
+  border-top: 0px;
+  display: none;
+}
+
+#new-select-box-balance {
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #4d4d4d;
+  border-top: 0px;
+  display: none;
+}
+
+.choice {
+  padding: 5px 0 5px 0;
+  background: #fff;
+  transition: all 0.1s;
+  cursor: pointer;
+  font-family: effra light
+}
+
+.item {
+  padding: 5px 0 5px 0;
+  background: #fff;
+  transition: all 0.1s;
+  cursor: pointer;
+  font-family: effra light
+}
+
+.choice:hover {
+  filter: brightness(90%);
+  font-family: effra;
+  font-size: 15px;
+  color: #d35a2a;
+}
+
+.item:hover {
+  filter: brightness(90%);
+  font-family: effra;
+  font-size: 15px;
+  color: #d35a2a;
+}
+
+#radio-from-funcao {
+  display: none;
+}
+
+#botoes-funcoes {
+  display: none;
+  justify-content: center;
+} */
+
 /* INPUTS DE TEXTO */
 
 .inedition {
   border: none;
-  margin: 10px;
-  padding: 2px;
+  margin: 10px 0px 10px 0px;
+  padding: 0px;
   font-family: effra;
   background: none;
   font-size: 20px;
@@ -1170,7 +1323,7 @@ textarea:focus,
 .inedition-big {
   width: 370px;
   border: none;
-  margin: 10px;
+  margin: 10px 0px 10px 0px;
   padding: 2px;
   font-family: effra;
   background: none;
@@ -1181,7 +1334,7 @@ textarea:focus,
 
 .inedition-password {
   border: none;
-  margin: 10px;
+  margin: 10px 0px 10px 0px;
   padding: 2px;
   font-family: effra;
   background: none;
@@ -1225,6 +1378,10 @@ input[type="date"].inedition:focus {
 }
 
 /* INPUTS DE BOTÃO */
+
+.select-edit-frontall {
+  width: 65%;
+}
 
 .cradio-edit input[type="radio"] {
   display: none;
@@ -1357,5 +1514,3 @@ textarea:focus,
   background: #4d4e53;
   color: #fff;
 }
-
-/* Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023 */

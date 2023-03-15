@@ -1,6 +1,6 @@
 <?php $id = uniqid(); ?>
 
-<!-- Versão 1.1 -->
+<!-- Versão 1.2 -->
 
 <!DOCTYPE html>
 <html>
@@ -123,7 +123,6 @@
 	<script>
 		document.getElementById("id").value = "<?php echo $id; ?>";
 	</script>
-	<!--Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023  -->
 </body>
 
 </html>

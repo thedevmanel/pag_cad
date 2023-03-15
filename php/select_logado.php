@@ -1,7 +1,7 @@
 <?php
 include "conexao.php";
 
-$botao = $_POST['enviar'];
+$botao = $_REQUEST['enviar'];
 
 if ($botao == 'logar') {
 
@@ -29,6 +29,7 @@ if ($botao == 'logar') {
                 $data_nascimento = $rows['data_nascimento'];
                 $data_inicio = $rows['data_inicio'];
                 $endereco = $rows['endereco'];
+                $empresa = $rows['empresa'];
                 $funcao = $rows['funcao'];
                 $funcao_nivel = $rows['funcao_nivel'];
                 $remuneracao = $rows['remuneracao'];
@@ -49,8 +50,11 @@ if ($botao == 'logar') {
 } else if ($botao == "editar") {
 } else if ($botao == 'editado') {
 } else if ($botao == 'cadastrar') {
+} else if ($botao == 'nada'){
 }
 
 mysqli_close($conn);
 
-// Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023 
+$url = "http://localhost//pag_cad/logado.php?id=" . urlencode($id);
+
+header('Location: '. $url);

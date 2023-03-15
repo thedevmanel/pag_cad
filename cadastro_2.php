@@ -1,15 +1,6 @@
 <?php
 
-$server = "localhost";
-$username = "root";
-$password = "";
-$data_base = "cadastro_frontall";
-
-$conn = mysqli_connect($server, $username, $password, $data_base);
-
-if (!$conn) {
-	die("Problema no server" . mysqli_connect_error());
-}
+include "php/conexao.php";
 
 $id = $_GET['id'];
 $imagem = $_GET['flImage'];
@@ -38,7 +29,6 @@ if (($select) && ($select->num_rows != 0)) {
 mysqli_close($conn);
 
 ?>
-
 <!DOCTYPE html>
 <html>
 
@@ -54,19 +44,8 @@ mysqli_close($conn);
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" /> -->
 	<link rel="shortcut icon" href="Imagens/Apenas-Logo(colorido).png" type="image/x-icon" />
 </head>
-<style>
-	#botoes-escolha {
-		visibility: 1;
-		transition: opacity 0.5s ease-out;
-	}
 
-	#botoes-escolha.hide {
-		visibility: 0;
-		transition: opacity 0.5s ease-out;
-	}
-</style>
-
-<body onload="">
+<body>
 	<div class="header">
 		<!-- PRIMEIRA CAIXA -->
 		<div class="imgtitulo">
@@ -78,7 +57,7 @@ mysqli_close($conn);
 		<div class="content-cad-1">
 			<img src="Imagens/join.svg" class="image-cadastro" alt="">
 			<div class="content-cad-2">
-				<form class="forms" action="logado.php" method="POST" autocomplete="off">
+				<form class="forms" action="php/inserir_dados.php" method="POST" autocomplete="off">
 
 					<br />
 					<h2 class="cad">cadastro</h2>
@@ -97,7 +76,7 @@ mysqli_close($conn);
 					</label>
 
 					<input type="text" maxlength="14" autocomplete="off" id="cpf" name="cpf"
-						placeholder="000.000.000-00" required class="incad" name="cpf" />
+						placeholder="000.000.000-00" required class="incad" name="cpf" onkeypress="return apenasNumeros(event)" />
 					<br />
 
 					<label for="data_nascimento" class="tudo">
@@ -123,7 +102,7 @@ mysqli_close($conn);
 					<br />
 
 					<label for="funcao" class="tudo">
-						funcao: <span class="asterisco">*</span><br />
+						contrato: <span class="asterisco">*</span><br />
 						<br class="buraco" />
 					</label>
 					<div class="cradio">
@@ -139,17 +118,37 @@ mysqli_close($conn);
 
 					</div>
 
-					<div id="botoes-escolha"></div>
-					<div id="botoes-funcoes">
-						<div id="conteiner-select">
-							<input type="text" id="new-select-input" name="nivel_funcao" placeholder="Selecione nivel"
-								onfocus="selectTab(0)" onblur="selectTab(1)" />
-							<div id="new-select-box">
-								<div class="item" id="item1" onmousedown="options(1)"> JR </div>
-								<div class="item" id="item2" onmousedown="options(2)"> MID </div>
-								<div class="item" id="item3" onmousedown="options(3)"> SR </div>
+					<div id="botoes-escolha">
+						<div id="container-select-frontall">
+							<input type="text" id="new-select-input-frontall" name="funcao-frontall"
+								placeholder="Selecione o Cargo" onfocus="selectFrontall(0)" onblur="selectFrontall(1)" />
+							<div id="new-select-box-frontall">
+								<div class="choice" id="choose1" onmousedown="choose(1)"> CEO </div>
+								<div class="choice" id="choose2" onmousedown="choose(2)"> Executive VP </div>
+								<div class="choice" id="choose3" onmousedown="choose(3)"> ADM/Finance </div>
+								<div class="choice" id="choose4" onmousedown="choose(4)"> Recruitment </div>
+								<div class="choice" id="choose5" onmousedown="choose(5)"> People and Culture </div>
+								<div class="choice" id="choose6" onmousedown="choose(6)"> Marketing </div>
+								<div class="choice" id="choose7" onmousedown="choose(7)"> Sales </div>
+								<div class="choice" id="choose8" onmousedown="choose(8)"> Custumer Device </div>
+								<div class="choice" id="choose9" onmousedown="choose(9)"> IT </div>
 							</div>
 						</div>
+					</div>
+					<div id="botoes-funcoes">
+						<div id="conteiner-select-balance">
+							<input type="text" id="new-select-input-balance" name="funcao-balance" placeholder="Selecione o Cargo"
+								onfocus="selectBalance(0)" onblur="selectBalance(1)" />
+							<div id="new-select-box-balance">
+								<div class="item" id="item1" onmousedown="options(1)"> Frontend </div>
+								<div class="item" id="item2" onmousedown="options(2)"> Backend </div>
+								<div class="item" id="item3" onmousedown="options(3)"> BA </div>
+								<div class="item" id="item4" onmousedown="options(4)"> QA </div>
+								<div class="item" id="item5" onmousedown="options(5)"> UI/UX </div>
+							</div>
+						</div>
+					</div>
+					<div class="cradio" id="radio-from-funcao">
 					</div>
 
 					<label for="remuneracao" class="tudo">
@@ -251,30 +250,12 @@ mysqli_close($conn);
 	<script src="js/scriptCheckbox.js"></script>
 	<script src="js/scriptMascaraData.js"></script>
 	<script>
-		function selectTab(p) {
-			let box = document.getElementById('new-select-box')
-			var parametros = ['block', 'none']
-			box.style.display = parametros[p]
-
-			const divSelect = document.getElementById("conteiner-select")
-			var comprimento = ['110px', '50px']
-			divSelect.style.height = comprimento[p]
-
-		}
-
-		function options(c) {
-			var info = document.getElementById('item' + c).innerHTML
-			document.getElementById('new-select-input').value = info
-		}
-	</script>
-	<script>
 		document.getElementById("id").value = "<?php echo $id; ?>";
 		document.getElementById("nome").value = "<?php echo $nome; ?>";
 		document.getElementById("email").value = "<?php echo $email; ?>";
 		document.getElementById("senha").value = "<?php echo $senha; ?>";
 		document.getElementById("telefone").value = "<?php echo $telefone; ?>";
 	</script>
-	<!--Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023  -->
 </body>
 
-</html>
+</html> 

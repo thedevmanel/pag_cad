@@ -1,10 +1,13 @@
 <?php
 
-include "php/inserir_dados.php";
+// include "php/inserir_dados.php";
 
-include "php/update_edit.php";
+// // include "php/update_edit.php";
 
-include "php/select_logado.php";
+// include "php/select_logado.php";
+
+include "php/verificar_id.php";
+
 
 ?>
 
@@ -41,14 +44,24 @@ include "php/select_logado.php";
 					<div class="title-logado"> informações do usuario </div>
 				</h2>
 				<div class="content-logado-2">
-					<div>
-						<img src="Imagens/galimg.png" alt="selecione uma imagem" id="image-inside" />
+					<div class="box-image-logado">
+						<img src="Imagens/galimg.png" alt="selecione uma imagem" id="image-frontall-from-logado" />
 					</div> <br />
 					<span class="fonts-logado">
 						<span class="maiusculo">
 							<?php echo $nome; ?>
 						</span> <br />
 						<?php echo $telefone; ?>
+					</span> <br />
+					<span class="fonts-logado">
+						<?php if ($empresa == "Frontall") {
+							print '<img src="Imagens/Logo-Frontall(colorido).png" alt="Frontall" 
+						class="image-frontall-from-logado" />';
+						} else {
+							print '<img src="Imagens/balance(logo).png" alt="Frontall" 
+						class="image-frontall-from-logado" />';
+						} ?>
+					</span> <br />
 					</span>
 				</div>
 				<div class="container-description-user">
@@ -70,7 +83,7 @@ include "php/select_logado.php";
 							<span class="fonts-logado"> Data de Inicio: </span><br />
 							<?php echo $data_inicio; ?> <br /><br />
 							<span class="fonts-logado"> Função: </span> <br />
-							<?php echo "$funcao($funcao_nivel)"; ?> <br /> <br />
+							<?php echo "$funcao$funcao_nivel"; ?> <br /> <br />
 							<span class="fonts-logado"> Situação: </span><br />
 							<?php echo $situacao; ?> <br /><br />
 							<?php
@@ -100,7 +113,7 @@ include "php/select_logado.php";
 			<a href="login.php"> <button class='return-login'> voltar </button> </a>
 
 			<form action="edicao.php" method="GET">
-				<input type="submit" name="enviar" class="botao-enviar-logado" value="editar">
+				<input type="submit" name="" class="botao-enviar-logado" value="editar">
 				<input type="text" name="id" id="id" class="hidden">
 			</form>
 
@@ -143,7 +156,6 @@ include "php/select_logado.php";
 		document.getElementById("id2").value = "<?php echo $id; ?>";
 	</script>
 	<script src="js/scriptDeletarUsuario.js"></script>
-	<!--Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023  -->
 </body>
 
 </html>

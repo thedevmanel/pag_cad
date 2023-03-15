@@ -27,7 +27,7 @@
 		<div class="content-log-1">
 			<img src="Imagens/login.svg" class="image-login" alt="" />
 			<div class="content-log-2">
-				<form class="forms" action="logado.php" method="POST" autocomplete="off">
+				<form class="forms" action="php/select_logado.php" method="POST" autocomplete="off">
 					<br />
 					<h2> login </h2> <br>
 					
@@ -42,7 +42,7 @@
 						<br class="buraco" />
 					</label>
 					<div class="caixa-mostrar-senha">
-						<input type="password" name="senha" placeholder="Digite sua senha" id="senha" required class="inlogin" />
+						<input type="password" name="senha" placeholder="Digite sua senha" id="senha"  class="inlogin" />
 						<span class="mostrar-senha"> <input type="checkbox" onclick="mostrarOcultarSenha()" class="inlogin"> </span>
 						<br />
 					</div>
@@ -83,7 +83,6 @@
 	</div>
 
 	<script src="js/scriptMostrarOcultarSenha.js"></script>
-	<!--Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023  -->
 </body>
 
 </html>

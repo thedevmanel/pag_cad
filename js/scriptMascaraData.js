@@ -7,7 +7,7 @@ nascimento.addEventListener('keypress', () => {
 
   if (nascimentolength === 2 || nascimentolength === 5) {
     nascimento.value += '/'
-  } 
+  }  
 })
 
 const inicio = document.getElementById('data_inicio')

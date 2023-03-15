@@ -14,5 +14,3 @@ if (mysqli_query($conn, $delete)) {
 mysqli_close($conn);
 
 header('location:http://localhost//pag_cad/login.php');
-
-// Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023 
