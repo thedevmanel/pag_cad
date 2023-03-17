@@ -6,7 +6,7 @@ $gatilho = true;
 
 $id = $_GET['id'];
 
-$query_select = "SELECT * FROM `pessoas` WHERE `id` = '$id'";
+$query_select = "SELECT * FROM $tabela WHERE `id` = '$id'";
 $select = mysqli_query($conn, $query_select);
 
 if (($select) && ($select->num_rows != 0)) {

@@ -4,7 +4,7 @@ include "conexao.php";
 
 $id = $_POST['id'];
 
-$delete = "DELETE FROM `pessoas` WHERE `id` = '$id'";
+$delete = "DELETE FROM $tabela WHERE `id` = '$id'";
 
 if (mysqli_query($conn, $delete)) {
 } else {

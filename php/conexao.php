@@ -1,16 +1,15 @@
 <?php
 
-$server = $_ENV['SERVER'];
-$username = $_ENV['USERNAME'];
-$password = $_ENV['PASSWORD'];
-$data_base = $_ENV['URL_BANCO'];
-$query = true;
+include "variaveis.php";
 
-$conn = mysqli_connect($server, $username, $password, $data_base);
-mysqli_set_charset($conn, "utf8mb4");
+$server = $local;
+$username = $user;
+$password = $real_password;
+$db = $url_banco;
+
+$conn = mysqli_connect($server, $username, $password, $db);
 
 if (!$conn) {
-    die("Problema no server" . mysqli_connect_error());
+    die("Error to connect" . mysqli_connect_error($conn));
+} else {
 }
-
-// Todos os direitos estão reservados para Emanuel Zanoti Rabello © 2023 

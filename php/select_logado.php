@@ -1,10 +1,6 @@
 <?php
 include "conexao.php";
 
-$botao = $_REQUEST['enviar'];
-
-if ($botao == 'logar') {
-
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $senha = md5($senha);
@@ -12,7 +8,7 @@ if ($botao == 'logar') {
 
     $gatilho = true;
 
-    $query_select = "SELECT * FROM `pessoas` WHERE `email` = '$email' AND `senha` = '$senha'";
+    $query_select = "SELECT * FROM $tabela WHERE `email` = '$email' AND `senha` = '$senha'";
     $select = mysqli_query($conn, $query_select);
 
     if (($select) && ($select->num_rows != 0)) {
@@ -47,11 +43,6 @@ if ($botao == 'logar') {
         </script>";
     } else {
     }
-} else if ($botao == "editar") {
-} else if ($botao == 'editado') {
-} else if ($botao == 'cadastrar') {
-} else if ($botao == 'nada'){
-}
 
 mysqli_close($conn);
 

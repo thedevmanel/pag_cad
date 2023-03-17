@@ -43,7 +43,7 @@ if ($situacao == 'inativo') {
     $data_termino = "Em Atividade...";
 }
 
-$insert_data = "INSERT INTO pessoas VALUES ('$id','$nome','$email','$senha','$telefone','$cpf','$data_nascimento','$data_inicio','$endereco',
+$insert_data = "INSERT INTO $tabela VALUES ('$id','$nome','$email','$senha','$telefone','$cpf','$data_nascimento','$data_inicio','$endereco',
         '$empresa','$funcao','$funcao_nivel','$remuneracao','$situacao','$data_termino','$nivel_atual','$fonte')";
 
 if (mysqli_query($conn, $insert_data)) {

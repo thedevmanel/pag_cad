@@ -56,7 +56,7 @@ function selectFrontall(p) {
     const divSelect = document.getElementById("container-select-frontall")
     var comprimento = ['260px', '50px']
     divSelect.style.height = comprimento[p]
-}
+}   
 
 function choose (c) {
     var info = document.getElementById('choose' + c).innerHTML

@@ -208,7 +208,7 @@ input[type="text"].incad {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 320px;
+  max-width: 70%;
   height: 25px;
   border: 1px solid #d35a2a;
   color: #4d4e53;
@@ -225,7 +225,7 @@ input[type="email"].incad {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 320px;
+  max-width: 70%;
   height: 25px;
   border: 1px solid #d35a2a;
   color: #4d4e53;
@@ -242,7 +242,7 @@ input[type="password"].incad {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 320px;
+  max-width: 70%;
   height: 25px;
   border: 1px solid #d35a2a;
   color: #4d4e53;
@@ -260,7 +260,7 @@ input[type="tel"] {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 320px;
+  max-width: 70%;
   height: 25px;
   border: 1px solid #d35a2a;
   color: #4d4e53;
@@ -277,7 +277,7 @@ input[type="date"] {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 320px;
+  max-width: 70%;
   height: 25px;
   border: 1px solid #d35a2a;
   color: rgb(173, 175, 184);
@@ -534,7 +534,7 @@ label.info-botao {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 320px;
+  max-width: 70%;
   height: 25px;
   border: 1px solid #d35a2a;
   color: #4d4e53;
@@ -622,6 +622,7 @@ p.linklog {
 .footer-info {
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 40px;
 }
 
@@ -646,8 +647,7 @@ p.linklog {
   width: 25px;
   height: 25px;
   position: relative;
-  left: 140%;
-  top: 10px;
+  top: 2px;
   margin-left: 10px;
   transition: all 0.3s;
 }
@@ -658,7 +658,6 @@ p.linklog {
 
 .fonte-rede {
   color: #d35a2a;
-  position: relative;
   top: 3.5%;
   left: 20%;
 }
@@ -694,7 +693,6 @@ p.linklog {
   color: #4d4d4d;
   font-family: effra light;
 }
-
 
 /*============================================= CSS DA PAGINA DE LOGIN =============================================*/
 
@@ -743,16 +741,6 @@ h2 {
   text-align: center;
 }
 
-.image-insade {
-  margin-top: 5px;
-  width: 95%;
-  height: 130px;
-  object-fit: cover;
-  padding: 0px;
-  background-color: #fff;
-  transition: ease 0.5s;
-}
-
 .box-image-logado {
   width: 100%;
   max-width: 150px;
@@ -766,9 +754,14 @@ h2 {
   transition: all 0.5s;
 }
 
-.image-frontall-from-logado {
-  width: 70%;
-  margin-top: -110%;
+#format-image {
+  margin-top: 5px;
+  width: 95%;
+  height: 130px;
+  object-fit: cover;
+  padding: 0px;
+  background-color: #fff;
+  transition: ease 0.5s;
 }
 
 /* ============================================= CSS DOS INPUTS DO LOGIN ============================================= */
@@ -779,7 +772,7 @@ input[type="text"].log {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 330px;
+  max-width: 70%;
   height: 25px;
   border: 1px solid #4d4e53;
   color: #d35a2a;
@@ -796,7 +789,7 @@ input[type="email"].inlogin {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 330px;
+  max-width: 70%;
   height: 25px;
   border: 1px solid #4d4e53;
   color: #d35a2a;
@@ -813,7 +806,7 @@ input[type="password"].inlogin {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 330px;
+  max-width: 70%;
   height: 25px;
   border: 1px solid #4d4e53;
   color: #d35a2a;
@@ -830,7 +823,7 @@ input[type="text"].inlogin {
   border-radius: 3px;
   font-family: effra;
   width: 100%;
-  max-width: 330px;
+  max-width: 70%;
   height: 25px;
   border: 1px solid #4d4e53;
   color: #d35a2a;
@@ -929,28 +922,31 @@ p.linkcad {
   text-align: center;
 }
 
+.format-content-logado-3 {
+  display: flex;
+}
+
 .content-logado-2 {
   background: #fff;
   width: 25%;
   font-size: 20px;
   display: block;
   text-align: center;
+  padding-block: 0px;
 }
 
 .content-logado-3 {
   background: #fff;
   width: 100%;
-  padding-top: 9%;
+
   min-width: 100%;
   font-size: 20px;
-  display: flex;
+  display: block;
 }
 
 .title-logado {
-  position: absolute;
-  width: 60%;
-  left: 20%;
-  top: 27%;
+  width: 100%;
+  margin-top: 1%;
 }
 
 .title-content-logado {
@@ -962,6 +958,8 @@ p.linkcad {
   width: 95%;
   justify-content: space-around;
   text-align: left;
+  padding-block: 30px 0px;
+
 }
 
 .content-description-user-1 {
@@ -982,6 +980,15 @@ p.linkcad {
 .fonts-logado {
   color: #d35a2a;
   padding: 0px 0px 0px 0px;
+}
+
+.image-frontall-from-logado {
+  width: 70%;
+}
+
+.image-balance-from-logado {
+  width: 70%;
+  margin: 6%;
 }
 
 /* DIV PARA GUARDAR OS BOTÕES */
@@ -1198,105 +1205,121 @@ input[type='submit'].botao-para-deletar:hover {
 }
 
 /* PERSONALIZAÇÃO DO SELECT */
-/*
-.container-edicao-select-frontall {
-  display: block;
-  height: 10px;
-}
 
-.conteiner-edicao-select-balance {
-  display: block;
-  height: 10px;
-}
-
-#new-select-input-frontall{
-  width: 160px;
-  background: #fff;
-  border: 1px solid #d35a2a;
-  outline: none;
-  border-radius: 3px;
-  font-family: effra;
-  cursor: pointer;
-  transition: all 0.5s;
-  text-align: center;
-  color: #d35a2a;
-}
-
-#new-select-input-balance {
-  width: 110px;
-  background: #fff;
-  border: 1px solid #d35a2a;
-  outline: none;
-  border-radius: 3px;
-  font-family: effra;
-  cursor: pointer;
-  transition: all 0.5s;
-  text-align: center;
-  color: #d35a2a;
-}
-
-#new-select-input-frontall:focus{
-  border: 1px solid #4d4d4d;
-}
-
-#new-select-input-balance:focus {
-  border: 1px solid #4d4d4d;
-}
-
-#new-select-box-frontall {
-  text-align: center;
-  font-size: 12px;
-  border: 1px solid #4d4d4d;
-  border-top: 0px;
-  display: none;
-}
-
-#new-select-box-balance {
-  text-align: center;
-  font-size: 12px;
-  border: 1px solid #4d4d4d;
-  border-top: 0px;
-  display: none;
-}
-
-.choice {
-  padding: 5px 0 5px 0;
-  background: #fff;
-  transition: all 0.1s;
-  cursor: pointer;
-  font-family: effra light
-}
-
-.item {
-  padding: 5px 0 5px 0;
-  background: #fff;
-  transition: all 0.1s;
-  cursor: pointer;
-  font-family: effra light
-}
-
-.choice:hover {
-  filter: brightness(90%);
-  font-family: effra;
-  font-size: 15px;
-  color: #d35a2a;
-}
-
-.item:hover {
-  filter: brightness(90%);
-  font-family: effra;
-  font-size: 15px;
-  color: #d35a2a;
-}
-
-#radio-from-funcao {
-  display: none;
-}
-
-#botoes-funcoes {
+#select-frontall {
   display: none;
   justify-content: center;
-} */
+  align-items: center;
+  width: 65%;
+}
+
+#select-balance {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+}
+
+#container-box-frontall {
+  display: block;
+  height: 20px;
+}
+
+#container-box-balance {
+  display: block;
+  height: 10px;
+}
+
+#edicao-select-frontall {
+  width: 160px;
+  padding: 2px;
+  background: #fff;
+  border: 1px solid #4d4e53;
+  outline: none;
+  border-radius: 3px;
+  font-family: effra;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-align: center;
+  color: #4d4e53;
+  font-size: 13px;
+}
+
+#edicao-select-balance {
+  width: 110px;
+  padding: 2px;
+  background: #fff;
+  border: 1px solid #4d4e53;
+  outline: none;
+  border-radius: 3px;
+  font-family: effra;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-align: center;
+  color: #4d4e53;
+  font-size: 13px;
+}
+
+#edicao-select-frontall:focus{
+  border: 1px solid #d35a2a;
+}
+
+#edicao-select-balance:focus {
+  border: 1px solid #d35a2a;
+}
+
+#escolhas-select-frontall {
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #d35a2a;
+  border-top: 0px;
+  display: none;
+}
+
+#escolhas-select-balance {
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #d35a2a;
+  border-top: 0px;
+  display: none;
+}
+
+.dados-select-frontall {
+  padding: 5px 0 5px 0;
+  background: #fff;
+  transition: all 0.1s;
+  cursor: pointer;
+  font-family: effra light
+}
+
+.dados-select-balance {
+  padding: 5px 0 5px 0;
+  background: #fff;
+  transition: all 0.1s;
+  cursor: pointer;
+  font-family: effra light
+}
+
+.dados-select-frontall:hover {
+  filter: brightness(90%);
+  font-family: effra;
+  font-size: 15px;
+  color: #d35a2a;
+}
+
+.dados-select-balance:hover {
+  filter: brightness(90%);
+  font-family: effra;
+  font-size: 15px;
+  color: #d35a2a;
+}
+
+#funcao-edicao {
+  width: 65%;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: -7%;
+}
 
 /* INPUTS DE TEXTO */
 
